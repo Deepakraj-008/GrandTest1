@@ -26,14 +26,10 @@ class _DynamicListState extends State<DynamicList> {
   void prefixWidgets()
   {
     widgets=["Text","Image","Button","List"];
-    for( var m in widgets)
-    {
-      _list.add(m);
-      if(m==4)
-        {
-          break;
-        }
-    }
+   for(int a=0; a<widgets.length;a++)
+     {
+       _list.add("Widgets :- ${widgets[a]}");
+     }
   }
 
   void main()
@@ -56,7 +52,7 @@ class _DynamicListState extends State<DynamicList> {
                   itemCount: _list.length,
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context,index){
-                    return Text("Widget:  ${_list[index]}");
+                    return Text(" ${_list[index]}");
                   }),
             )
           ],
