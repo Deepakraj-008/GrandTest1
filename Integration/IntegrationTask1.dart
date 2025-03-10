@@ -44,11 +44,11 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
       m++;
       _list.add("Attempt :- $m");
     }
-    print(_list.length);
-    print("m value $m");
+   // print(_list.length);
+   // print("m value $m");
     if (m == 3) {
       n = m;
-      print("n value $n");
+     // print("n value $n");
        noty = [{
         "title": "Streak Notifications",
         "Read": false
@@ -65,8 +65,8 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
       ];
       // widgets.add(noty);
 
-      print("im printing widgets here---------------------------------------> function ");
-      print(noty);
+    //  print("im printing widgets here---------------------------------------> function ");
+    //  print(noty);
     }
 
   }
@@ -77,18 +77,18 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
     if(noty.isEmpty)
     {
       result="No notifications" ;
-      print("im in a if sttatment");
+     // print("im in a if sttatment");
     }
     else
     {
 
-      print("im in a else before function ");
+    //  print("im in a else before function ");
 
      FinalOP.add(noty.where((noty)=>noty["Read"]== false).map((t)=>t["title"]).toList());
 
      num="$FinalOP New";
 
-      print("im in a else after function ");
+    //  print("im in a else after function ");
 
     }
   }
