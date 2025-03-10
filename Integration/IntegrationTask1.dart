@@ -76,16 +76,21 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
     if(noty.isEmpty)
     {
       result="No notifications" ;
-     // print("im in a if sttatment");
+     // print("im in a if statement");
     }
     else
     {
 
     //  print("im in a else before function ");
+    //   for (var Finals in noty) {
+    //     String title = Finals["title"];
+    //     bool isRead = Finals["read"];
+    //     print(isRead ? title : "$title (New)");
+    //   }
 
-     FinalOP.add(noty.where((noty)=>noty["Read"]== false).map((t)=>t["title"]).toList());
+     FinalOP.add(noty.where((noty)=>noty["Read"]== false).map((t)=> "${t["title"]} (New)").toList());
 
-     num="$FinalOP New";
+
 
     //  print("im in a else after function ");
 
@@ -123,7 +128,7 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
                   itemCount: FinalOP.length,
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context,index){
-                    return  Text("${FinalOP[index]} ");
+                    return  Text("${FinalOP[index]}  ");
                   }),
             )
           ],
