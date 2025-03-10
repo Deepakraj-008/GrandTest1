@@ -1,8 +1,8 @@
 
 // 2. **Logical Decisions:**
 //
-//     Create a function that accepts two booleans (e.g., `isLoggedIn` and `hasPremiumAccess`) and
-//     uses logical operators (`&&`, `||`, `!`) to return an appropriate access message. Test this function with different inputs.
+//     Create a function that accepts two booleans (e.g., `isLoggedIn` and `hasPremiumstatus`) and
+//     uses logical operators (`&&`, `||`, `!`) to return an appropriate status message. Test this function with different inputs.
 //
 //
 
@@ -24,26 +24,29 @@ class _LogicalDecisionsState extends State<LogicalDecisions> {
   @override
   Widget build(BuildContext context) {
 
-    void main()
-    {
-      bool isLoggedIn =false;
-      bool hasPremiumAccess =true;
-      if(isLoggedIn && hasPremiumAccess)
+    String checkstatus(bool isLoggedIn, bool Premiumstatus) {
+      if (isLoggedIn && Premiumstatus)
       {
-        result = " u can access both are passes  ";
+        return "U can status granted for both status";
       }
-     else if(isLoggedIn || hasPremiumAccess)
+      else if (isLoggedIn)
       {
-        result = "  u can access only one of them   ";
+        return "Login status granted.";
       }
-     else if(!isLoggedIn)
+      else if (Premiumstatus)
       {
-        result = " u can access isLoggedIn pass   ";
+        return "Premium status granted but not logged in.";
       }
-      else
-        result = " u can access hasPremiumAccess pass  ";
+      else {
+        return "status denied.";
+      }
     }
-
+    void main() {
+    //  result=(checkstatus(true, true));
+     // result=(checkstatus(true, false));
+     // result=(checkstatus(false, true));
+      result=(checkstatus(true, false));
+    }
 
     main();
     return SafeArea(
