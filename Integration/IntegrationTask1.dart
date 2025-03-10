@@ -48,7 +48,6 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
    // print("m value $m");
     if (m == 3) {
       n = m;
-     // print("n value $n");
        noty = [{
         "title": "Streak Notifications",
         "Read": false
@@ -92,19 +91,20 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
 
     }
   }
-  void main()
-  {
+
+
+@override
+  void initState() {
+    super.initState();
     fetchNotifications();
     buildNotificationUI();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
 
 
-    main();
+
     return SafeArea(
       child: Scaffold(
         body: Column(
