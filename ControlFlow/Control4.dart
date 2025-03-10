@@ -29,15 +29,6 @@ class _SwitchNavigatorState extends State<SwitchNavigator> {
      case "/Profile"
        :k="U r in Profile Page";
      break;
-     case "/Login"
-       :k="U r in Login Page";
-     break;
-     case "/Logout"
-       :k="U r in Logout Page";
-     break;
-     case "/Settings"
-       :k="U r in Settings Page";
-     break;
      default :
        k=" Unknown route path ";
        break;
