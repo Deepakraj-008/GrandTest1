@@ -88,7 +88,7 @@ class _GrandIntegrationProjectState extends State<GrandIntegrationProject> {
     //     print(isRead ? title : "$title (New)");
     //   }
 
-     FinalOP.add(noty.where((noty)=>noty["Read"]== false).map((t)=> "${t["title"]} (New)").toList());
+     FinalOP=noty.where((noty)=>noty["Read"]== false).map((t)=> "${t["title"]} (New)").toList();
 
 
 
