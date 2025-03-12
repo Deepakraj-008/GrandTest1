@@ -41,14 +41,8 @@ class _LogicalDecisionsState extends State<LogicalDecisions> {
         return "status denied.";
       }
     }
-    void main() {
-    //  result=(checkstatus(true, true));
-     // result=(checkstatus(true, false));
-     // result=(checkstatus(false, true));
-      result=(checkstatus(true, false));
-    }
+    result=(checkstatus(true, false));
 
-    main();
     return SafeArea(
       child: Scaffold(
         body: Column(

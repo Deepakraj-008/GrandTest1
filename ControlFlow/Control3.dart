@@ -19,31 +19,28 @@ class ElseIfLadder extends StatefulWidget {
 
 class _ElseIfLadderState extends State<ElseIfLadder> {
   String? k;
-  String connectionStatusMessage( String status )
-  {
-    if(status == "success")
-    {
-      return k = " u r status was success  ";
-    }
-    else if(status == "failure")
-    {
-      return k = "  u r status was failure    ";
-    }
-    else if(status == "loading")
-    {
-      return k = "  u r status was loading    ";
-    }
-    else
-      return k = "  Unknown Status found!  ";
-  }
+
   @override
   Widget build(BuildContext context) {
-
-    void main()
+    String connectionStatusMessage( String status )
     {
-      connectionStatusMessage("loading");
+      if(status == "success")
+      {
+        return k = " u r status was success  ";
+      }
+      else if(status == "failure")
+      {
+        return k = "  u r status was failure    ";
+      }
+      else if(status == "loading")
+      {
+        return k = "  u r status was loading    ";
+      }
+      else
+        return k = "  Unknown Status found!  ";
     }
-    main();
+    connectionStatusMessage("loading");
+
     return SafeArea(
       child: Scaffold(
         body: Column(

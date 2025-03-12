@@ -19,34 +19,32 @@ class SwitchNavigator extends StatefulWidget {
 class _SwitchNavigatorState extends State<SwitchNavigator> {
   String? k;
 
-  String navigateRoute( String route)
-  {
-   switch(route) {
-     case "/home"
-         :
-       return k = "U r in Home Page";
 
-     case "/Profile"
-         :
-       return k = "U r in Profile Page";
-
-     case "/settings"
-         :
-       return k = "U r in settings Page";
-
-     default :
-       return k = " Unknown route path ";
-   }
-
-  }
   @override
   Widget build(BuildContext context) {
 
-    void main()
-    {
-      navigateRoute("/settings");
+
+    String navigateRoute( String route) {
+      switch (route) {
+        case "/home"
+            :
+          return k = "U r in Home Page";
+
+        case "/Profile"
+            :
+          return k = "U r in Profile Page";
+
+        case "/settings"
+            :
+          return k = "U r in settings Page";
+
+        default :
+          return k = " Unknown route path ";
+      }
     }
-    main();
+    navigateRoute("/settings");
+
+
     return SafeArea(
       child: Scaffold(
         body: Column(
