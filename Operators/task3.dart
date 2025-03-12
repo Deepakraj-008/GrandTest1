@@ -32,7 +32,7 @@ class _ComparisonChallengeState extends State<ComparisonChallenge> {
         }
       else if(a>b)
       {
-        return result = " a = $a Lesser then  b = $b   ";
+        return result = " a = $a Greater then  b = $b   ";
       }else if(a>=b)
       {
         return result = " a = $a Greater then  b = $b  ";
@@ -41,7 +41,7 @@ class _ComparisonChallengeState extends State<ComparisonChallenge> {
         return result = " a = $a Lesser then  b = $b  ";
       }else if(a<=b)
       {
-        return result = " a = $a Greater then  b = $b  ";
+        return result = " a = $a Lesser then  b = $b  ";
       }else if(a!=b)
       {
         return result = " a = $a and b = $b values are Not same  ";
@@ -51,11 +51,8 @@ class _ComparisonChallengeState extends State<ComparisonChallenge> {
 
 
     }
-    void main()
-    {
-      Compare(75,25);
-    }
-    main();
+      Compare(75,45);
+
     return SafeArea(
       child: Scaffold(
         body: Column(
