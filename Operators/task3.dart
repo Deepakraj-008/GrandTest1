@@ -24,39 +24,36 @@ class _ComparisonChallengeState extends State<ComparisonChallenge> {
   @override
   Widget build(BuildContext context) {
 
-
-
-    void main()
+    String Compare( int a , int b)
     {
-      int a =60;
-      int b =40;
       if(a==b)
         {
-          result = " a = $a and b = $b values are same  ";
+        return  result = " a = $a and b = $b values are same  ";
         }
       else if(a>b)
       {
-        result = " a = $a Lesser then  b = $b   ";
+        return result = " a = $a Lesser then  b = $b   ";
       }else if(a>=b)
       {
-        result = " a = $a Greater then  b = $b  ";
+        return result = " a = $a Greater then  b = $b  ";
       }else if(a<b)
       {
-        result = " a = $a Lesser then  b = $b  ";
+        return result = " a = $a Lesser then  b = $b  ";
       }else if(a<=b)
       {
-        result = " a = $a Greater then  b = $b  ";
+        return result = " a = $a Greater then  b = $b  ";
       }else if(a!=b)
       {
-        result = " a = $a and b = $b values are Not same  ";
+        return result = " a = $a and b = $b values are Not same  ";
       }
       else
-        result = " please enter the values of a & b  ";
+        return result = " please enter the values of a & b  ";
 
 
-
-
-
+    }
+    void main()
+    {
+      Compare(75,25);
     }
     main();
     return SafeArea(

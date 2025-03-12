@@ -27,13 +27,13 @@ class _LogicalDecisionsState extends State<LogicalDecisions> {
     String checkstatus(bool isLoggedIn, bool Premiumstatus) {
       if (isLoggedIn && Premiumstatus)
       {
-        return "U can status granted for both status";
+        return "U can granted for both status";
       }
-      else if (isLoggedIn)
+      else if (isLoggedIn && !Premiumstatus)
       {
-        return "Login status granted.";
+        return "Login status granted. premium status not granted";
       }
-      else if (Premiumstatus)
+      else if (!isLoggedIn && Premiumstatus)
       {
         return "Premium status granted but not logged in.";
       }

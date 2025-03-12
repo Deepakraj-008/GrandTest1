@@ -19,21 +19,24 @@ class SwitchNavigator extends StatefulWidget {
 class _SwitchNavigatorState extends State<SwitchNavigator> {
   String? k;
 
-  void navigateRoute( String route)
+  String navigateRoute( String route)
   {
-   switch(route)
-    {
+   switch(route) {
      case "/home"
-       :k="U r in Home Page";
-     break;
-     case "/Profile"
-       :k="U r in Profile Page";
-     break;
-     default :
-       k=" Unknown route path ";
-       break;
+         :
+       return k = "U r in Home Page";
 
-    }
+     case "/Profile"
+         :
+       return k = "U r in Profile Page";
+
+     case "/settings"
+         :
+       return k = "U r in settings Page";
+
+     default :
+       return k = " Unknown route path ";
+   }
 
   }
   @override
@@ -41,7 +44,7 @@ class _SwitchNavigatorState extends State<SwitchNavigator> {
 
     void main()
     {
-      navigateRoute("/Settings");
+      navigateRoute("/settings");
     }
     main();
     return SafeArea(

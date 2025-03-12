@@ -19,28 +19,24 @@ class WhileLoop extends StatefulWidget {
 
 class _WhileLoopState extends State<WhileLoop> {
   dynamic? result,k;
+  List<int> _list=[];
 
+  void simulateNetworkRetry()
+  {
+    int attempt=1;
+    while(attempt<=3)
+    {
+      _list.add(attempt);
+      attempt++;
+    }
+  }
+  void main()
+  {
+    simulateNetworkRetry();
+  }
 
   @override
   Widget build(BuildContext context) {
-    List<int> _list=[];
-
-    void simulateNetworkRetry()
-    {
-      int n=0,m=2;
-      while(n<=m)
-      {
-        n++;
-        _list.add(n);
-
-      }
-    }
-
-    void main()
-    {
-      simulateNetworkRetry();
-    }
-
 
     main();
     return SafeArea(
@@ -55,9 +51,9 @@ class _WhileLoopState extends State<WhileLoop> {
                       //mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                         Text("${_list[index]} ") ,
+                         Text("attempt = ${_list[index]} ") ,
                         if(_list[index]==3)
-                            Text("Max attempt reached")
+                            Text("U have reached the Maximum attempt's")
 
                       ],
                     );
